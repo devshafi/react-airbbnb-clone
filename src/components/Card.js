@@ -1,29 +1,29 @@
 import star from '../images/star.png';
 export default function Card(props) {
 
-    console.log('props.item', props.item);
+    console.log('props', props);
 
-    console.log(props.item.openSpots)
-    console.log(props.item.location)
+    console.log(props.openSpots)
+    console.log(props.location)
 
 
     let badgeText;
-    if (props.item.openSpots === 0) badgeText = 'SOLD OUT';
-    else if (props.item.location === "Online") badgeText = "ONLINE";
+    if (props.openSpots === 0) badgeText = 'SOLD OUT';
+    else if (props.location === "Online") badgeText = "ONLINE";
 
     return (
         <div className="card-container">
             {badgeText && <div className='card-badge'>{badgeText}</div>}
-            <img src={require(`../images/${props.item.coverImg}`)} alt="katie-zaferes" className='card-thumbnail' />
+            <img src={require(`../images/${props.coverImg}`)} alt="katie-zaferes" className='card-thumbnail' />
             <div className="rating">
                 <img src={star} alt="star" className='star' />
-                <span className='rating-point' >{props.item.stats.rating}</span>
-                <span className='rating-people'>{props.item.stats.reviewCount} • </span>
-                <span className='rating-country'>{props.item.location}</span>
+                <span className='rating-point' >{props.stats.rating}</span>
+                <span className='rating-people'>{props.stats.reviewCount} • </span>
+                <span className='rating-country'>{props.location}</span>
             </div>
-            <p className='card-title'>{props.item.title}</p>
+            <p className='card-title'>{props.title}</p>
             <div className='card-fee'>
-                <p className='fee'>From ${props.item.price}</p>
+                <p className='fee'>From ${props.price}</p>
                 <p className='fee-slash'>/</p>
                 <p>person</p>
             </div>

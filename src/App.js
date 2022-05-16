@@ -10,7 +10,9 @@ export default function App() {
     return (
       <Card
         key={item.id}
-        item={item}
+        // spread syntax to pass all the 
+        //item of an object as prop
+        {...item}
       />
 
     )
