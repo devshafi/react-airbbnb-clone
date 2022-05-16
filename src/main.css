@@ -59,9 +59,11 @@ Card
 
 .card-container {
   width: 15rem;
+  flex-shrink: 0;
+  position: relative;
 }
 
-.card-thumbnail{
+.card-thumbnail {
   display: block;
   margin: auto;
   width: 100%;
@@ -88,7 +90,7 @@ Card
   margin-left: 0.2rem;
 }
 
- /* {
+/* {
   color: #918e9b;
   font-size: 0.9rem;
   margin-left: 0.2rem;
@@ -108,14 +110,33 @@ Card
 }
 
 .card-fee p {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
-.fee{
+.fee {
   font-weight: bold;
 }
 
-.fee-slash{
-  margin-left: .2rem;
-  margin-right: .2rem;
+.fee-slash {
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+}
+
+.cards-container {
+  display: flex;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  gap: 2rem;
+  width: 100vw;
+  overflow-x: auto;
+}
+
+.card-badge {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  background-color: white;
+  padding: 5px 7px;
+  border-radius: 2px;
+  font-weight: bold;
 }
