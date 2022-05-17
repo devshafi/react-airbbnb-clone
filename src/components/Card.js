@@ -1,12 +1,6 @@
 import star from '../images/star.png';
 export default function Card(props) {
 
-    console.log('props', props);
-
-    console.log(props.openSpots)
-    console.log(props.location)
-
-
     let badgeText;
     if (props.openSpots === 0) badgeText = 'SOLD OUT';
     else if (props.location === "Online") badgeText = "ONLINE";
